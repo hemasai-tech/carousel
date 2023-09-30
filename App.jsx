@@ -1,36 +1,16 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import Animation from './src/components/Animation';
+import GmailLogin from './src/components/login/GmailLogin';
+import ImageCarousel from './src/components/carousel/Carousel';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import StackNavigation from './StackNavigation';
 
 const App = () => {
-  return <Animation />;
+  return (
+    <GestureHandlerRootView
+      style={{flex: 1, marginBottom: 'auto', backgroundColor: '#fff'}}>
+      <StackNavigation />
+    </GestureHandlerRootView>
+  );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 50,
-    paddingHorizontal: 2,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
